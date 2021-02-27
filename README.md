@@ -1,1 +1,1 @@
-# TraPlan
+# Stranometr
