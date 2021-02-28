@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Stranometr</string>
+    <string name="app_name" translatable="false">Stranometr</string>
+    <string name="new_game">New game</string>
+    <string name="toolbar_main_title">Stranometr</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 </resources>

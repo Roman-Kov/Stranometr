@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="new_game">Новая игра</string>
+    <string name="toolbar_main_title">Странометр</string>
+    <string name="start">Старт</string>
+    <string name="stop">Стоп</string>
+</resources>

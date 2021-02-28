@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.rojer_ko.stranometr.presentation.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_currentGameFragment"
+            app:destination="@id/currentGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/currentGameFragment"
+        android:name="com.rojer_ko.stranometr.presentation.ui.CurrentGameFragment"
+        android:label="fragment_current_game"
+        tools:layout="@layout/fragment_current_game" />
+</navigation>

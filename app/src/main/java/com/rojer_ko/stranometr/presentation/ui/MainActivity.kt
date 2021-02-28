@@ -1,7 +1,8 @@
-package com.rojer_ko.stranometr
+package com.rojer_ko.stranometr.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rojer_ko.stranometr.R
 
 class MainActivity: AppCompatActivity() {
 
