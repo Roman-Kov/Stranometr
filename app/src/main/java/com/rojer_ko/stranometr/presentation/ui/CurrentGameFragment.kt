@@ -1,5 +1,6 @@
 package com.rojer_ko.stranometr.presentation.ui
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_current_game.*
 class CurrentGameFragment : Fragment() {
 
     companion object {
-        private const val ROUND_TIME_TOTAL: Long = 20000 // milliseconds
+        private const val ROUND_TIME_TOTAL: Long = 30000 // milliseconds
     }
 
     override fun onCreateView(
@@ -30,11 +31,17 @@ class CurrentGameFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        startTimer()
+        val mp = MediaPlayer.create(context, R.raw.finish)
+        startTimer(mp)
     }
 
-    private fun startTimer() {
+    private fun startTimer(mp: MediaPlayer) {
+
         round_start_btn.setOnClickListener {
+            if (mp.isPlaying){
+                mp.pause()
+                mp.seekTo(0)
+            }
             timer_textview.text = getTimeString(ROUND_TIME_TOTAL)
             round_start_btn.isEnabled = false
             val timer = object : CountDownTimer(ROUND_TIME_TOTAL, 1000) {
@@ -43,6 +50,7 @@ class CurrentGameFragment : Fragment() {
                 }
 
                 override fun onFinish() {
+                    mp.start()
                     round_start_btn.isEnabled = true
                 }
             }
